@@ -1,0 +1,56 @@
+body {
+  background-color: #F3F3F3;
+  font-family: Arial;
+  font-size: 20px;
+}
+
+.inline {
+  display: inline;
+}
+
+.checkbox {
+  margin-left: 40px;
+}
+
+.content {
+  background-color: white;
+  box-sizing: border-box;
+  border-top: solid 40px #5B6772;
+}
+
+.addnew {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: 5px;
+}
+
+.pull-right {
+  margin-right: 20px;
+}
+
+.edited {
+  color: gray;
+}
+
+.finished {
+  text-decoration: line-through;
+  color: gray;
+}
+
+.save {
+  color: white;
+  background-color: #60C0DC;
+  border-radius: 3px;
+  border: none;
+}
+
+.delete {
+  color: white;
+  background-color: #D75453;
+  border-radius: 3px;
+  border: none;
+}
+
+.task {
+  margin-left: 5px;
+}

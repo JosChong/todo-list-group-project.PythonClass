@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>ToDo List</title>
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="css/master.css">
+    <script type="text/javascript" src="../jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="../angular.min.js"></script>
+    <script type="text/javascript" src="js/app.js"></script>
+  </head>
+  <body ng-app="myApp">
+    <section ng-controller="myController">
+      <div class="row text-center">
+        <h1><b>ToDo List</b></h1>
+      </div>
+      <div class="col-md-10 col-md-offset-1 content">
+        <div class="row addnew">
+          <a href="" ng-click="addNew()">+ Add a New Task</a>
+        </div>
+        <div class="row" ng-repeat="item in list | orderBy: 'finished'">
+          <form class="inline checkbox" action="" method="">
+            <input type="checkbox" name="checked" value="checked" ng-model="item.finished">
+          </form>
+          <p ng-class="line(item)" ng-click="edit(item)" ng-show="item.showing" class="inline task">{{item.task}}</p>
+          <input ng-show="item.hiding" class="inline edittask" type="text" name="" value="" ng-model="item.task">
+          <p ng-show="item.edited" class="inline edited">EDITED</p>
+          <form class="inline pull-right" action="" method="">
+            <button class="save" type="button" name="save" ng-click="save(item)">Save</button>
+            <button class="delete" type="button" name="delete" ng-click="delete(item)">Delete</button>
+          </form>
+          <hr>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
